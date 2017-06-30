@@ -6,9 +6,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+
   </head>
 
   <body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">FAKEBOOK</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%=link_to "Write", new_post_path%></li>
+        <li><%=link_to "About", ''%></li>
+      </ul>
+    </div>
+  </nav>
     <%= yield %>
   </body>
 </html>
